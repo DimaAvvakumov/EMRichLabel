@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184BC4821702B0290059417B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BC4811702B0290059417B /* UIKit.framework */; };
+		184BC4841702B0290059417B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BC4831702B0290059417B /* Foundation.framework */; };
+		184BC4861702B0290059417B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BC4851702B0290059417B /* CoreGraphics.framework */; };
+		184BC4B61702B0FC0059417B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184BC4B51702B0FC0059417B /* CoreText.framework */; };
+		18C7E77D17094F2300A308D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E77917094F2300A308D5 /* AppDelegate.m */; };
+		18C7E77E17094F2300A308D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E77B17094F2300A308D5 /* ViewController.m */; };
+		18C7E77F17094F2300A308D5 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7E77C17094F2300A308D5 /* ViewController.xib */; };
+		18C7E78B17094F4C00A308D5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C7E78117094F4C00A308D5 /* Default-568h@2x.png */; };
+		18C7E78C17094F4C00A308D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C7E78217094F4C00A308D5 /* Default.png */; };
+		18C7E78D17094F4C00A308D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C7E78317094F4C00A308D5 /* Default@2x.png */; };
+		18C7E78E17094F4C00A308D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18C7E78417094F4C00A308D5 /* InfoPlist.strings */; };
+		18C7E78F17094F4C00A308D5 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7E78617094F4C00A308D5 /* ViewController.xib */; };
+		18C7E79017094F4C00A308D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E78817094F4C00A308D5 /* main.m */; };
+		18C7E79D1709501D00A308D5 /* EMRichLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E7941709501D00A308D5 /* EMRichLabel.m */; };
+		18C7E79E1709501D00A308D5 /* EMRichLabelDrawManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E7961709501D00A308D5 /* EMRichLabelDrawManager.m */; };
+		18C7E79F1709501D00A308D5 /* EMRichLabelDrawOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E7981709501D00A308D5 /* EMRichLabelDrawOperation.m */; };
+		18C7E7A01709501D00A308D5 /* EMRichLabelRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E79A1709501D00A308D5 /* EMRichLabelRender.m */; };
+		18C7E7A11709501D00A308D5 /* EMRichLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E79C1709501D00A308D5 /* EMRichLabelStyle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		184BC47E1702B0290059417B /* RichLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		184BC4811702B0290059417B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		184BC4831702B0290059417B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		184BC4851702B0290059417B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		184BC4B51702B0FC0059417B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		18C7E77817094F2300A308D5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18C7E77917094F2300A308D5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18C7E77A17094F2300A308D5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18C7E77B17094F2300A308D5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18C7E77C17094F2300A308D5 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		18C7E78117094F4C00A308D5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		18C7E78217094F4C00A308D5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		18C7E78317094F4C00A308D5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		18C7E78517094F4C00A308D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18C7E78717094F4C00A308D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		18C7E78817094F4C00A308D5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18C7E78917094F4C00A308D5 /* RichLabel-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RichLabel-Info.plist"; sourceTree = "<group>"; };
+		18C7E78A17094F4C00A308D5 /* RichLabel-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RichLabel-Prefix.pch"; sourceTree = "<group>"; };
+		18C7E7931709501D00A308D5 /* EMRichLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRichLabel.h; sourceTree = "<group>"; };
+		18C7E7941709501D00A308D5 /* EMRichLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRichLabel.m; sourceTree = "<group>"; };
+		18C7E7951709501D00A308D5 /* EMRichLabelDrawManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRichLabelDrawManager.h; sourceTree = "<group>"; };
+		18C7E7961709501D00A308D5 /* EMRichLabelDrawManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRichLabelDrawManager.m; sourceTree = "<group>"; };
+		18C7E7971709501D00A308D5 /* EMRichLabelDrawOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRichLabelDrawOperation.h; sourceTree = "<group>"; };
+		18C7E7981709501D00A308D5 /* EMRichLabelDrawOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRichLabelDrawOperation.m; sourceTree = "<group>"; };
+		18C7E7991709501D00A308D5 /* EMRichLabelRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRichLabelRender.h; sourceTree = "<group>"; };
+		18C7E79A1709501D00A308D5 /* EMRichLabelRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRichLabelRender.m; sourceTree = "<group>"; };
+		18C7E79B1709501D00A308D5 /* EMRichLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRichLabelStyle.h; sourceTree = "<group>"; };
+		18C7E79C1709501D00A308D5 /* EMRichLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRichLabelStyle.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		184BC47B1702B0290059417B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184BC4B61702B0FC0059417B /* CoreText.framework in Frameworks */,
+				184BC4821702B0290059417B /* UIKit.framework in Frameworks */,
+				184BC4841702B0290059417B /* Foundation.framework in Frameworks */,
+				184BC4861702B0290059417B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		184BC4751702B0290059417B = {
+			isa = PBXGroup;
+			children = (
+				18C7E7921709501D00A308D5 /* EMRichLabel */,
+				18C7E77717094F2300A308D5 /* classes */,
+				18C7E78017094F4C00A308D5 /* resources */,
+				184BC4801702B0290059417B /* Frameworks */,
+				184BC47F1702B0290059417B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		184BC47F1702B0290059417B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				184BC47E1702B0290059417B /* RichLabel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		184BC4801702B0290059417B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184BC4B51702B0FC0059417B /* CoreText.framework */,
+				184BC4811702B0290059417B /* UIKit.framework */,
+				184BC4831702B0290059417B /* Foundation.framework */,
+				184BC4851702B0290059417B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18C7E77717094F2300A308D5 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				18C7E77817094F2300A308D5 /* AppDelegate.h */,
+				18C7E77917094F2300A308D5 /* AppDelegate.m */,
+				18C7E77A17094F2300A308D5 /* ViewController.h */,
+				18C7E77B17094F2300A308D5 /* ViewController.m */,
+				18C7E77C17094F2300A308D5 /* ViewController.xib */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		18C7E78017094F4C00A308D5 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				18C7E78117094F4C00A308D5 /* Default-568h@2x.png */,
+				18C7E78217094F4C00A308D5 /* Default.png */,
+				18C7E78317094F4C00A308D5 /* Default@2x.png */,
+				18C7E78417094F4C00A308D5 /* InfoPlist.strings */,
+				18C7E78617094F4C00A308D5 /* ViewController.xib */,
+				18C7E78817094F4C00A308D5 /* main.m */,
+				18C7E78917094F4C00A308D5 /* RichLabel-Info.plist */,
+				18C7E78A17094F4C00A308D5 /* RichLabel-Prefix.pch */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		18C7E7921709501D00A308D5 /* EMRichLabel */ = {
+			isa = PBXGroup;
+			children = (
+				18C7E7931709501D00A308D5 /* EMRichLabel.h */,
+				18C7E7941709501D00A308D5 /* EMRichLabel.m */,
+				18C7E7951709501D00A308D5 /* EMRichLabelDrawManager.h */,
+				18C7E7961709501D00A308D5 /* EMRichLabelDrawManager.m */,
+				18C7E7971709501D00A308D5 /* EMRichLabelDrawOperation.h */,
+				18C7E7981709501D00A308D5 /* EMRichLabelDrawOperation.m */,
+				18C7E7991709501D00A308D5 /* EMRichLabelRender.h */,
+				18C7E79A1709501D00A308D5 /* EMRichLabelRender.m */,
+				18C7E79B1709501D00A308D5 /* EMRichLabelStyle.h */,
+				18C7E79C1709501D00A308D5 /* EMRichLabelStyle.m */,
+			);
+			path = EMRichLabel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		184BC47D1702B0290059417B /* RichLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184BC4A11702B0290059417B /* Build configuration list for PBXNativeTarget "RichLabel" */;
+			buildPhases = (
+				184BC47A1702B0290059417B /* Sources */,
+				184BC47B1702B0290059417B /* Frameworks */,
+				184BC47C1702B0290059417B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RichLabel;
+			productName = RichLabel;
+			productReference = 184BC47E1702B0290059417B /* RichLabel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		184BC4761702B0290059417B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Dima Avvakumov";
+			};
+			buildConfigurationList = 184BC4791702B0290059417B /* Build configuration list for PBXProject "RichLabel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 184BC4751702B0290059417B;
+			productRefGroup = 184BC47F1702B0290059417B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				184BC47D1702B0290059417B /* RichLabel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		184BC47C1702B0290059417B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C7E77F17094F2300A308D5 /* ViewController.xib in Resources */,
+				18C7E78B17094F4C00A308D5 /* Default-568h@2x.png in Resources */,
+				18C7E78C17094F4C00A308D5 /* Default.png in Resources */,
+				18C7E78D17094F4C00A308D5 /* Default@2x.png in Resources */,
+				18C7E78E17094F4C00A308D5 /* InfoPlist.strings in Resources */,
+				18C7E78F17094F4C00A308D5 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		184BC47A1702B0290059417B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C7E77D17094F2300A308D5 /* AppDelegate.m in Sources */,
+				18C7E77E17094F2300A308D5 /* ViewController.m in Sources */,
+				18C7E79017094F4C00A308D5 /* main.m in Sources */,
+				18C7E79D1709501D00A308D5 /* EMRichLabel.m in Sources */,
+				18C7E79E1709501D00A308D5 /* EMRichLabelDrawManager.m in Sources */,
+				18C7E79F1709501D00A308D5 /* EMRichLabelDrawOperation.m in Sources */,
+				18C7E7A01709501D00A308D5 /* EMRichLabelRender.m in Sources */,
+				18C7E7A11709501D00A308D5 /* EMRichLabelStyle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18C7E78417094F4C00A308D5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C7E78517094F4C00A308D5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		18C7E78617094F4C00A308D5 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C7E78717094F4C00A308D5 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		184BC49F1702B0290059417B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		184BC4A01702B0290059417B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		184BC4A21702B0290059417B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "resources/RichLabel-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/resources/RichLabel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		184BC4A31702B0290059417B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "resources/RichLabel-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/resources/RichLabel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		184BC4791702B0290059417B /* Build configuration list for PBXProject "RichLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184BC49F1702B0290059417B /* Debug */,
+				184BC4A01702B0290059417B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184BC4A11702B0290059417B /* Build configuration list for PBXNativeTarget "RichLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184BC4A21702B0290059417B /* Debug */,
+				184BC4A31702B0290059417B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 184BC4761702B0290059417B /* Project object */;
+}
