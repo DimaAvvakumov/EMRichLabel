@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>default</key>
+	<dict>
+		<key>FontName</key>
+		<string>Arial</string>
+		<key>FontSize</key>
+		<integer>14</integer>
+		<key>LineHeight</key>
+		<integer>26</integer>
+		<key>Color</key>
+		<string>0,0,0</string>
+	</dict>
+	<key>b</key>
+	<dict>
+		<key>FontName</key>
+		<string>Arial-BoldMT</string>
+	</dict>
+	<key>a</key>
+	<dict>
+		<key>Color</key>
+		<string>255,0,0</string>
+		<key>UnderlineStyle</key>
+		<integer>1</integer>
+	</dict>
+	<key>shadow</key>
+	<dict>
+		<key>ShadowColor</key>
+		<string>0,0,0</string>
+		<key>ShadowOffset</key>
+		<string>{1,1}</string>
+	</dict>
+</dict>
+</plist>

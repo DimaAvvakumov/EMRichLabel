@@ -7,6 +7,9 @@
 //
 
 #import "EMRichLabel.h"
+#import "EMRichLabelSharedStyles.h"
+#import "EMRichLabelRender.h"
+#import "EMRichLabelDrawManager.h"
 
 @interface EMRichLabel ()
 
@@ -52,9 +55,97 @@
 }
 
 - (void) setText: (NSString *) text {
-    [_render setText: text];
     [_render removeAllStyles];
     [_render removeAllBounds];
+    
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<(/?[a-z0-9_-]+)>" options:NSRegularExpressionCaseInsensitive error:&error];
+    if (error) {
+        NSLog(@"Regular exp error: %@", error);
+    }
+    NSString *cleanText = [regex stringByReplacingMatchesInString:text options:0 range:NSMakeRange(0, [text length]) withTemplate:@""];
+    NSArray *matches = [regex matchesInString:text options:0 range:NSMakeRange(0, [text length])];
+    if (matches && [matches count]) {
+        NSMutableArray *tags = [NSMutableArray arrayWithCapacity: [matches count]];
+        NSMutableArray *poss = [NSMutableArray arrayWithCapacity: [matches count]];
+        
+        NSUInteger offset = 0;
+        for (NSTextCheckingResult *match in matches) {
+            NSRange matchRange = [match range];
+            NSRange firstHalfRange = [match rangeAtIndex:1];
+            
+            [tags addObject: [text substringWithRange: firstHalfRange]];
+            [poss addObject: [NSNumber numberWithInt: (matchRange.location - offset)]];
+            
+            offset += matchRange.length;
+        }
+        
+        for (int i = 0; i < [tags count]; i++) {
+            NSString *tag = [tags objectAtIndex: i];
+            NSUInteger start = [[poss objectAtIndex: i] integerValue];
+            
+            if (![tag hasPrefix: @"/"]) {
+                NSUInteger index = [self positionOfString:[NSString stringWithFormat: @"/%@", tag] inArray:tags startIndex:i];
+                if (index == NSNotFound) continue;
+                
+                NSUInteger end = [[poss objectAtIndex: index] integerValue];
+                
+                EMRichLabelStyle *style = [[EMRichLabelSharedStyles sharedInstance] styleByName: tag];
+                if (style) {
+                    style.rangeStart = start;
+                    style.rangeLength = end - start;
+                    
+                    [_render addStyle: style];
+                } else {
+                    NSLog(@"Style named: %@ not found in style sheet", tag);
+                }
+            }
+        }
+    }
+    
+    [_render setText: cleanText];
+    
+    self.preImage = nil;
+    [self setNeedsDisplay];
+}
+
+- (void) setStyleByName: (NSString *) name {
+    EMRichLabelStyle *style = [[EMRichLabelSharedStyles sharedInstance] styleByName: name];
+    if (style == nil) {
+        NSLog(@"Style named: %@ not found in style sheet", name);
+        
+        return;
+    }
+    
+    // font
+    if (style.fontName && style.fontSize) {
+        [_render setFontWithName: style.fontName andSize: style.fontSize];
+    }
+    
+    // line height
+    if (style.lineHeight > 0) {
+        [_render setLineHeight: style.lineHeight];
+    }
+    
+    // color
+    if (style.color) {
+        [_render setColor: style.color];
+    }
+    
+    // indent
+    if (style.indent > 0) {
+        [_render setTextIndent: style.indent];
+    }
+    
+    // text alignment
+    [_render setTextAlignment: style.textAlignment];
+    
+    // shadow
+    [_render setShadowColor:style.shadowColor andOffset:style.shadowOffset];
+    [_render setShadowBlur:style.shadowBlur];
+    
+    // underline
+    // [_render setUnderlineStyle: style.underlineStyle andColor: style.underlineColor];
     
     self.preImage = nil;
     [self setNeedsDisplay];
@@ -167,5 +258,25 @@
         [_render drawInContext: context];
     }
 }
+
+#pragma mark - Shared styles
+
++ (void) setSharedStylesFile:(NSString *)filePath {
+    [[EMRichLabelSharedStyles sharedInstance] setStylesFile: filePath];
+}
+
+#pragma mark - NSArray search
+
+- (NSUInteger) positionOfString: (NSString *) str inArray: (NSArray *) arr startIndex: (NSUInteger) startIndex {
+    for (int i = startIndex; i < [arr count]; i++) {
+        NSString *inner = [arr objectAtIndex: i];
+        if ([inner isKindOfClass: [NSString class]] && [inner isEqualToString: str]) {
+            return i;
+        }
+    }
+    
+    return NSNotFound;
+}
+
 
 @end

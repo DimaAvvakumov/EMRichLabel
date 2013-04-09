@@ -7,12 +7,17 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
+#import "EMRichLabel.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // EMRichLabel settings
+    NSString *stylesFile = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent: @"RichLabelStyles.plist"];
+    [EMRichLabel setSharedStylesFile: stylesFile];
+    
+    // View controller
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];

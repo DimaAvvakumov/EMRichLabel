@@ -23,15 +23,23 @@ typedef enum {
     EMRichLabelUnderlineThick   = kCTUnderlineStyleThick
 } EMRichLabelUnderlineStyle;
 
-@interface EMRichLabelStyle : NSObject
+@interface EMRichLabelStyle : NSObject <NSCopying>
 
 @property (assign, nonatomic) NSUInteger rangeStart;
 @property (assign, nonatomic) NSUInteger rangeLength;
-@property (retain, nonatomic) NSString *fontName;
+@property (strong, nonatomic) NSString *fontName;
 @property (assign, nonatomic) float fontSize;
-@property (retain, nonatomic) UIColor *color;
+@property (assign, nonatomic) float lineHeight;
+@property (strong, nonatomic) UIColor *color;
 @property (assign, nonatomic) float indent;
+
+@property (assign, nonatomic) EMRichLabelAlignment textAlignment;
+
+@property (assign, nonatomic) CGSize shadowOffset;
+@property (assign, nonatomic) float shadowBlur;
+@property (strong, nonatomic) UIColor *shadowColor;
+
 @property (assign, nonatomic) EMRichLabelUnderlineStyle underlineStyle;
-@property (assign, nonatomic) UIColor *underlineColor;
+@property (strong, nonatomic) UIColor *underlineColor;
 
 @end

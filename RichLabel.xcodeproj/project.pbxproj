@@ -25,6 +25,8 @@
 		18C7E79F1709501D00A308D5 /* EMRichLabelDrawOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E7981709501D00A308D5 /* EMRichLabelDrawOperation.m */; };
 		18C7E7A01709501D00A308D5 /* EMRichLabelRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E79A1709501D00A308D5 /* EMRichLabelRender.m */; };
 		18C7E7A11709501D00A308D5 /* EMRichLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E79C1709501D00A308D5 /* EMRichLabelStyle.m */; };
+		18EB9CFB1713E13A00E499F8 /* RichLabelStyles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18EB9CFA1713E13A00E499F8 /* RichLabelStyles.plist */; };
+		18EB9CFE1713E24200E499F8 /* EMRichLabelSharedStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB9CFD1713E24200E499F8 /* EMRichLabelSharedStyles.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,9 @@
 		18C7E79A1709501D00A308D5 /* EMRichLabelRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRichLabelRender.m; sourceTree = "<group>"; };
 		18C7E79B1709501D00A308D5 /* EMRichLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRichLabelStyle.h; sourceTree = "<group>"; };
 		18C7E79C1709501D00A308D5 /* EMRichLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRichLabelStyle.m; sourceTree = "<group>"; };
+		18EB9CFA1713E13A00E499F8 /* RichLabelStyles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RichLabelStyles.plist; sourceTree = "<group>"; };
+		18EB9CFC1713E24200E499F8 /* EMRichLabelSharedStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRichLabelSharedStyles.h; sourceTree = "<group>"; };
+		18EB9CFD1713E24200E499F8 /* EMRichLabelSharedStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRichLabelSharedStyles.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +131,7 @@
 				18C7E78817094F4C00A308D5 /* main.m */,
 				18C7E78917094F4C00A308D5 /* RichLabel-Info.plist */,
 				18C7E78A17094F4C00A308D5 /* RichLabel-Prefix.pch */,
+				18EB9CFA1713E13A00E499F8 /* RichLabelStyles.plist */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 				18C7E79A1709501D00A308D5 /* EMRichLabelRender.m */,
 				18C7E79B1709501D00A308D5 /* EMRichLabelStyle.h */,
 				18C7E79C1709501D00A308D5 /* EMRichLabelStyle.m */,
+				18EB9CFC1713E24200E499F8 /* EMRichLabelSharedStyles.h */,
+				18EB9CFD1713E24200E499F8 /* EMRichLabelSharedStyles.m */,
 			);
 			path = EMRichLabel;
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 				18C7E78D17094F4C00A308D5 /* Default@2x.png in Resources */,
 				18C7E78E17094F4C00A308D5 /* InfoPlist.strings in Resources */,
 				18C7E78F17094F4C00A308D5 /* ViewController.xib in Resources */,
+				18EB9CFB1713E13A00E499F8 /* RichLabelStyles.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +231,7 @@
 				18C7E79F1709501D00A308D5 /* EMRichLabelDrawOperation.m in Sources */,
 				18C7E7A01709501D00A308D5 /* EMRichLabelRender.m in Sources */,
 				18C7E7A11709501D00A308D5 /* EMRichLabelStyle.m in Sources */,
+				18EB9CFE1713E24200E499F8 /* EMRichLabelSharedStyles.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

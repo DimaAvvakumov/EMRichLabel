@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreText/CoreText.h>
 #import "EMRichLabelStyle.h"
-#import "EMRichLabelRender.h"
-#import "EMRichLabelDrawManager.h"
 
 @class EMRichLabel;
 @protocol EMRichLabelDelegate <NSObject>
@@ -38,7 +36,11 @@
 - (void) setShadowColor: (UIColor *) color andOffset: (CGSize) offset;
 - (void) setShadowBlur: (float) blur;
 
+- (void) setStyleByName: (NSString *) name;
+
 - (CGSize) size;
 - (UIImage *) textImage;
+
++ (void) setSharedStylesFile: (NSString *) filePath;
 
 @end

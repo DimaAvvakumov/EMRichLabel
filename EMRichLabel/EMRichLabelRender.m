@@ -355,12 +355,14 @@
     
     // underlining
     SInt32 type = style.underlineStyle;
-    CFNumberRef underline = CFNumberCreate(NULL, kCFNumberSInt32Type, &type);
-    CFAttributedStringSetAttribute(_attributedString, range, kCTUnderlineStyleAttributeName, underline);
+    if (type) {
+        CFNumberRef underline = CFNumberCreate(NULL, kCFNumberSInt32Type, &type);
+        CFAttributedStringSetAttribute(_attributedString, range, kCTUnderlineStyleAttributeName, underline);
+        CFRelease(underline);
+    }
     if (style.underlineColor) {
         CFAttributedStringSetAttribute(_attributedString, range, kCTUnderlineColorAttributeName, style.underlineColor.CGColor);
     }
-    CFRelease(underline);
     
     // apply color
     if (style.color) {
