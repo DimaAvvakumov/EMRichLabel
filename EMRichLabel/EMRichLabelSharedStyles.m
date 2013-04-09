@@ -35,7 +35,11 @@
 
 - (void) setStylesFile: (NSString *) filePath {
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile: filePath];
-    if (dictionary == nil) return;
+    if (dictionary == nil) {
+        NSLog(@"EMRichLabel styles file not found: %@", filePath);
+        
+        return;
+    }
     
     self.styles = [NSMutableDictionary dictionaryWithCapacity: [dictionary count]];
     
