@@ -158,6 +158,12 @@
     [self setNeedsDisplay];
 }
 
+- (void) setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    
+    [_render setWidth: frame.size.width];
+}
+
 - (void) setFontWithName:(NSString *)fontName andSize:(float)fontSize {
     [_render setFontWithName: fontName andSize: fontSize];
     [_render setLineHeight: fontSize];
